@@ -4,27 +4,22 @@ pipeline{
         stage('Build'){
 
             steps{
-                sh 'mvn clean install'
+                sh 'g++ -o fresh fresh.cpp'
                 echo 'Build stage successful'
             }
         }
         stage('Test'){
             steps{
-                sh 'mvn test'
+                sh './fresh'
                 echo 'Test stage successful'
-                post{
-                    always{
-                        junit 'target/surefire-reports/*.xml'
-                    }
-                }
             }
         }
-        stage('Deploy'){
-            steps{
-                sh 'mvn deploy'
-                echo 'Deployment successful'
-            }
-        }
+        // stage('Deploy'){
+        //     steps{
+        //         sh 'mvn deploy'
+        //         echo 'Deployment successful'
+        //     }
+        // }
     }
     post{
         failure{
