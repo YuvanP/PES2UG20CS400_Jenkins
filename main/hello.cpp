@@ -4,7 +4,7 @@ using namespace std;
 
 int main(void) {
   cout << "Hello, PES2UG20CS400\n";
-  cout << "Hello, Jenkins\n";
-  cout << "Running successfully\n";
+  cout << "Modified cpp file\n";
+  cout << "Running automatically\n";
   return 0;
 }
