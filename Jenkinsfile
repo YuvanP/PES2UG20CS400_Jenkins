@@ -2,15 +2,14 @@ pipeline{
     agent any
     stages {
         stage('Build'){
-
             steps{
-                sh 'g++ -o fresh fresh.cpp'
+                sh 'g++ -o out fresh.cpp'
                 echo 'Build stage successful'
             }
         }
         stage('Test'){
             steps{
-                sh './fresh'
+                sh './out'
                 echo 'Test stage successful'
             }
         }
