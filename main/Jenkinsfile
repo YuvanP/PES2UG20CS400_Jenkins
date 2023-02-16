@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage('Build'){
             steps{
-                sh 'g++ -o out "https://github.com/YuvanP/PES2UG20CS400_Jenkins/main/main/fresh.cpp"'
+                sh 'g++ -o out https://github.com/YuvanP/PES2UG20CS400_Jenkins/main/fresh.cpp'
                 echo 'Build stage successful'
             }
         }
