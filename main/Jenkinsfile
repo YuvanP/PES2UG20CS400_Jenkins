@@ -3,14 +3,14 @@ pipeline{
     stages {
         stage('Build'){
             steps{
-                sh 'g++ -o out .\\fresh.cpp'
+                sh 'g++ -o PES2UG20CS400-1 fresh.cpp'
 //                 sh 'make Makefile'
                 echo 'Build stage successful'
             }
         }
         stage('Test'){
             steps{
-                sh './out'
+                sh './PES2UG20CS400-1'
                 echo 'Test stage successful'
             }
         }
